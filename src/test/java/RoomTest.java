@@ -51,15 +51,15 @@ public class RoomTest {
 
     @Test
     public void canRemoveEnemy(){
-        room.removeEnemy(monster1);
+        room.removeMonster(monster1);
         assertEquals(2, room.getMonsters().size());
     }
 
     @Test
     public void roomIsComplete(){
-        room.removeEnemy(monster1);
-        room.removeEnemy(monster2);
-        room.removeEnemy(monster3);
+        room.removeMonster(monster1);
+        room.removeMonster(monster2);
+        room.removeMonster(monster3);
         room.takeTreasure();
         room.takeTreasure();
         room.takeTreasure();

@@ -28,7 +28,7 @@ public class Room {
         return foundTreasure;
     }
 
-    public void removeEnemy(Monster monster){
+    public void removeMonster(Monster monster){
         int index = monsters.indexOf(monster);
         monsters.remove(index);
     }
@@ -53,5 +53,9 @@ public class Room {
     // n.b method just for testing purposes
     public void removeAllTreasure() {
         this.treasure.clear();
+    }
+
+    public void removeTreasure() {
+        getTreasure().remove(0);
     }
 }

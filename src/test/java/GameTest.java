@@ -1,9 +1,9 @@
 import game.Game;
 import game.players.Player;
 import game.players.characterclasses.CharacterClass;
+import game.players.characterclasses.MagicUser;
 import game.players.characterclasses.Warrior;
-import game.players.characterclasses.characterSpecials.WarriorTypes;
-import game.players.characterclasses.characterSpecials.WeaponTypes;
+import game.players.characterclasses.characterSpecials.*;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
 import game.enemies.Monster;
@@ -19,7 +19,8 @@ public class GameTest {
 
     Game game;
     Room room;
-    Player player;
+    Player player1;
+    Player player2;
 
     @Before
     public void before(){
@@ -43,8 +44,10 @@ public class GameTest {
         room.addTreasure(treasure2);
         room.addTreasure(treasure3);
 
-        CharacterClass characterClass = new Warrior(WarriorTypes.KNIGHT, WeaponTypes.BOW);
-        player = new Player("Eric", characterClass);
+        CharacterClass characterClass1 = new Warrior(WarriorTypes.KNIGHT, WeaponTypes.BOW);
+        CharacterClass characterClass2 = new MagicUser(MagicUserType.WIZARD, SpellType.FIREBALL, Creature.YOSHI);
+        player1 = new Player("Eric", characterClass1);
+        player2 = new Player("Ethan", characterClass2);
 
     }
 
@@ -102,12 +105,16 @@ public class GameTest {
         assertEquals(0, game.getRooms().get(0).getMonsters().size());
     }
 
-//    @Test
-//    public void canFight(){
-//        ArrayList<Player> players = game.getPlayers();
-//        players.add(player);
-//        Monster monster1 = new Monster(MonsterTypes.GOBLIN);
-//
-//        game.fight(players, monster1);
-//    }
+    @Test
+    public void canHaveFight(){
+        game.setDifficulty(2);
+        game.setNumberOfPlayers(2);
+        game.generateRooms();
+        Room room = game.getRooms().get(0);
+        ArrayList<Player> players = game.getPlayers();
+        players.add(player1);
+        players.add(player2);
+        Monster monster1 = new Monster(MonsterTypes.GOBLIN);
+        game.combat(players, monster1, room, 0);
+    }
 }

@@ -57,4 +57,8 @@ public class Monster {
             return hitPoints;
         }
     }
+
+    public boolean isNotDead() {
+        return hitPoints > 0;
+    }
 }

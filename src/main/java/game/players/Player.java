@@ -1,5 +1,6 @@
 package game.players;
 
+import game.enemies.Monster;
 import game.players.characterclasses.CharacterClass;
 
 public class Player {
@@ -50,5 +51,14 @@ public class Player {
         } else {
             return "hurt!";
         }
+    }
+
+    public void getExperienceReward(Monster monster) {
+        int rating = monster.getType().getHitPoints();
+        experience += rating * 10;
+    }
+
+    public void takeTreasure(int treasure) {
+        gold += treasure;
     }
 }

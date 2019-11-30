@@ -132,25 +132,40 @@ public class Game {
         System.out.println("Well done, you have completed the quest!");
     }
 
-    public void loopThroughMonsters(Room room){
-        int combatIndex = 0;
-        while(combatIndex < room.getMonsters().size()){
-            Monster monster = room.getMonsters().get(combatIndex);
-            startCombat(players, monster);
-            combatIndex ++;
+    public void selectMonsterToFight(Room room, int monsterIndex){
+        if(monsterIndex < room.getMonsters().size()){
+        Monster monster = room.getMonsters().get(monsterIndex);
+        combat(players, monster, room, monsterIndex);
+        } else {
+        roomCompleted();
         }
     }
 
-    public void startCombat(ArrayList<Player> players, Monster monster) {
+    private void roomCompleted() {
+        System.out.println("Room Completed!!!!");
+    }
+
+    public void combat(ArrayList<Player> players, Monster monster, Room room, int monsterIndex) {
         int playerIndex = 0;
         while(playerIndex < players.size()){
             Player activePlayer = players.get(playerIndex);
             String playerAttack = activePlayer.getCharacterClass().attack(monster);
-            String monsterAttack = monster.attack(activePlayer);
-            playerIndex ++;
             System.out.println(playerAttack);
-            System.out.println(monsterAttack);
-        }
+           if(monster.isNotDead())
+           {String monsterAttack = monster.attack(activePlayer);
+           System.out.println(monsterAttack);
+           playerIndex ++;
+           } else {
+               System.out.println("The monster has been defeated.");
+               int treasure  = room.getTreasure().get(monsterIndex).getGoldValue();
+               activePlayer.takeTreasure(treasure);
+               activePlayer.getExperienceReward(monster);
+//               room.removeMonster(monster);
+//               room.removeTreasure();
+               monsterIndex ++;
+               selectMonsterToFight(room, monsterIndex);
+               break;
+           }
+        } playerIndex ++;
     }
-
 }
