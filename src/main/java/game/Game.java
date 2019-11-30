@@ -1,12 +1,13 @@
 package game;
 
 import game.players.Player;
+import game.players.characterclasses.*;
+import game.players.characterclasses.characterSpecials.*;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.enemies.Monster;
-import game.enemies.MonsterTypes;
+import game.monsters.Monster;
+import game.monsters.MonsterTypes;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -113,28 +114,68 @@ public class Game {
         String inputNumberOfPlayers = inputScanner.next();
         System.out.println("You have entered "+ inputNumberOfPlayers +" players.");
 
-        //Get player name:
-        System.out.println("Name?");
-        String player1name = inputScanner.next();
+        //Get player name - needs to loop for inputNumberOfPlayers times
+        System.out.println("Character Name?");
+        String playerName = inputScanner.next();
         //Get player type:
         System.out.println("Character Class? Select number:");
-        System.out.println("1. Dwarf");
-        System.out.println("2. Barbarian");
-        System.out.println("3. Knight");
-        System.out.println("4. Cleric");
-        System.out.println("5. Wizard");
-        System.out.println("6. Warlock");
-        System.out.println("7. Sorcerer");
-        System.out.println("8. Mage");
-        int playerType = inputScanner.nextInt();
+        CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
+        int index = 1;
+        for(CharacterClassSelection characterClassSelector: allCharacterClasses) {
+            String option = "    " + index + ". " + characterClassSelector.getName();
+            System.out.println(option);
+            index ++;
+        }
+            int playerClassInput = inputScanner.nextInt();
+            CharacterClass playerClass = classSelector(playerClassInput);
+            Player newPlayer = new Player(playerName, playerClass);
+            String playerType = allCharacterClasses[playerClassInput - 1].getName();
+            System.out.println("You have created " + playerName + " the " + playerType + ".");
 
-        System.out.println("Difficulty lever?");
+
+
+        System.out.println("Difficulty level?");
         String inputDifficulty = inputScanner.next();
         System.out.println("Difficulty set to "+ inputDifficulty +".");
 
         this.difficulty = Integer.parseInt(inputDifficulty);
         this.numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
         generateRooms();
+    }
+
+    public CharacterClass classSelector(int playerClassInput) {
+        if(playerClassInput == 1)
+        {
+            return new Warrior(WarriorTypes.DWARF, WeaponTypes.randomWeapon());
+        }
+        else if (playerClassInput == 2)
+        {
+            return new Warrior(WarriorTypes.BARBARIAN, WeaponTypes.randomWeapon());
+        }
+        else if (playerClassInput == 3)
+        {
+            return new Warrior(WarriorTypes.BARBARIAN, WeaponTypes.randomWeapon());
+        }
+        else if (playerClassInput == 4)
+        {
+            return new Cleric(HealingTool.randomHealingTool());
+        }
+        else if (playerClassInput == 5)
+        {
+            return new MagicUser(MagicUserType.WIZARD, SpellType.LIGHTNINGBOLT, Creature.randomCreature() );
+        }
+        else if (playerClassInput == 6)
+        {
+            return new MagicUser(MagicUserType.WARLOCK, SpellType.FIREBALL, Creature.randomCreature() );
+        }
+        else if (playerClassInput == 7)
+        {
+            return new MagicUser(MagicUserType.SORCERER, SpellType.FREEZE, Creature.randomCreature() );
+        }
+        else
+        {
+            return new MagicUser(MagicUserType.MAGE, SpellType.MAGICMISSILE, Creature.OGRE);
+        }
     }
 
     public void quest(){

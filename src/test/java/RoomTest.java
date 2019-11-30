@@ -1,7 +1,7 @@
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.enemies.Monster;
-import game.enemies.MonsterTypes;
+import game.monsters.Monster;
+import game.monsters.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
 

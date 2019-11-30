@@ -1,6 +1,6 @@
 package game.rooms;
 
-import game.enemies.Monster;
+import game.monsters.Monster;
 
 import java.util.ArrayList;
 

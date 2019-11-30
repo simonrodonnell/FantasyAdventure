@@ -4,6 +4,7 @@ public enum SpellType {
 
     FIREBALL(15),
     LIGHTNINGBOLT(10),
+    MAGICMISSILE(10),
     FREEZE(5);
 
     private int damage;

@@ -6,8 +6,8 @@ import game.players.characterclasses.Warrior;
 import game.players.characterclasses.characterSpecials.*;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.enemies.Monster;
-import game.enemies.MonsterTypes;
+import game.monsters.Monster;
+import game.monsters.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -128,5 +128,12 @@ public class GameTest {
         players.add(player1);
         players.add(player2);
         game.selectMonsterToFight(room, 0);
+    }
+
+    @Test
+    public void userCanInputPlayerDetails(){
+        CharacterClass playerInput = game.classSelector(1);
+        System.out.println(playerInput);
+        assertEquals(playerInput, playerInput);
     }
 }

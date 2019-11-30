@@ -5,7 +5,7 @@ import game.behaviours.IAttack;
 import game.players.Player;
 import game.players.characterclasses.characterSpecials.WeaponTypes;
 import game.players.characterclasses.characterSpecials.WarriorTypes;
-import game.enemies.Monster;
+import game.monsters.Monster;
 
 public class Warrior extends CharacterClass implements IAttack {
 
@@ -32,8 +32,8 @@ public class Warrior extends CharacterClass implements IAttack {
     public String attack(Player player, Monster monster){
         Dice dice = new Dice();
 //        int playerAttacks = dice.rollDice();
-        int playerAttacks = 10; // FIXED VALUE FOR TESTING
 //        int enemyDefends = dice.rollDice();
+        int playerAttacks = 10; // FIXED VALUE FOR TESTING
         int enemyDefends = 5; // FIXED VALUE FOR TESTING
         if(playerAttacks > enemyDefends){
             return monster.takeDamage(player, weapon.getDamage());

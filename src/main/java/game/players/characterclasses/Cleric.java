@@ -5,7 +5,7 @@ import game.behaviours.IAttack;
 import game.players.Player;
 import game.players.characterclasses.characterSpecials.HealingTool;
 import game.players.characterclasses.characterSpecials.WeaponTypes;
-import game.enemies.Monster;
+import game.monsters.Monster;
 
 public class Cleric extends CharacterClass implements IAttack {
 

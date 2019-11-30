@@ -1,4 +1,4 @@
-package game.enemies;
+package game.monsters;
 
 import game.behaviours.Dice;
 import game.players.Player;

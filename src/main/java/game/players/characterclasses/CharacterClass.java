@@ -1,6 +1,6 @@
 package game.players.characterclasses;
 
-import game.enemies.Monster;
+import game.monsters.Monster;
 import game.players.Player;
 
 public abstract class CharacterClass {

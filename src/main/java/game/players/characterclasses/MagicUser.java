@@ -6,7 +6,7 @@ import game.players.Player;
 import game.players.characterclasses.characterSpecials.SpellType;
 import game.players.characterclasses.characterSpecials.Creature;
 import game.players.characterclasses.characterSpecials.MagicUserType;
-import game.enemies.Monster;
+import game.monsters.Monster;
 
 public class MagicUser extends CharacterClass implements IAttack {
 

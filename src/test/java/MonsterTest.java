@@ -1,5 +1,5 @@
-import game.enemies.Monster;
-import game.enemies.MonsterTypes;
+import game.monsters.Monster;
+import game.monsters.MonsterTypes;
 import game.players.Player;
 import game.players.characterclasses.CharacterClass;
 import game.players.characterclasses.Warrior;

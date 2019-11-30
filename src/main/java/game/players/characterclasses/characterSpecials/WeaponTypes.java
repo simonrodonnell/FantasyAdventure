@@ -1,5 +1,8 @@
 package game.players.characterclasses.characterSpecials;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public enum WeaponTypes {
 
     SWORD(3),
@@ -12,6 +15,13 @@ public enum WeaponTypes {
 
     WeaponTypes(int damage){
         this.damage = damage;
+    }
+
+    public static WeaponTypes randomWeapon() {
+        WeaponTypes[] allWeapons = values();
+        Random randomNumber = new Random();
+        int randomInt = randomNumber.nextInt(allWeapons.length);
+        return allWeapons[randomInt];
     }
 
     public int getDamage(){

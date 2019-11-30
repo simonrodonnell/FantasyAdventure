@@ -1,6 +1,6 @@
 package game.behaviours;
 
-import game.enemies.Monster;
+import game.monsters.Monster;
 import game.players.Player;
 
 public interface IAttack {
