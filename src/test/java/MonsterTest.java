@@ -23,6 +23,6 @@ public class MonsterTest {
     public void canAttack(){
         CharacterClass characterClass = new Warrior(WarriorTypes.KNIGHT, WeaponTypes.BOW);
         Player player = new Player("Eric", characterClass);
-        assertEquals("The Goblin does 1 points of damage. Eric is hurt!", monster.attack(player));
+        assertEquals("The Goblin does 1 points of damage. Eric is hurt! 29 hp left.", monster.attack(player));
     }
 }

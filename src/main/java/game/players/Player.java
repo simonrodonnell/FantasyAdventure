@@ -15,7 +15,7 @@ public class Player {
     public Player(String name, CharacterClass characterClass){
         this.name = name;
         this.characterClass = characterClass;
-        this.maxHitPoints = 50;
+        this.maxHitPoints = 30;
         this.hitPoints = maxHitPoints;
         this.gold = 0;
         this.experience = 0;

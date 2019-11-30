@@ -39,7 +39,7 @@ public class PlayerTest {
 
     @Test
     public void playHasHitPoints() {
-        assertEquals(20, player.getHitPoints());
+        assertEquals(30, player.getHitPoints());
     }
 
     @Test

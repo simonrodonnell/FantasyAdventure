@@ -25,7 +25,7 @@ public class WarriorTest {
     @Test
     public void canAttack(){
         String result = warrior.attack(player, monster);
-        assertEquals("Eric hit the Goblin!", result);
+        assertEquals("Eric hit the Goblin! It has 1 hp left.", result);
         assertEquals(1, monster.getHitPoints());
 
     }
