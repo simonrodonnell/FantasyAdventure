@@ -1,7 +1,6 @@
 package game.players;
 
 import game.players.characterclasses.CharacterClass;
-import game.rooms.enemies.Monster;
 
 public class Player {
 
@@ -15,7 +14,7 @@ public class Player {
     public Player(String name, CharacterClass characterClass){
         this.name = name;
         this.characterClass = characterClass;
-        this.maxHitPoints = 20;
+        this.maxHitPoints = 50;
         this.hitPoints = maxHitPoints;
         this.gold = 0;
         this.experience = 0;
@@ -41,6 +40,15 @@ public class Player {
         this.hitPoints += healingFactor;
         if(hitPoints > maxHitPoints){
             hitPoints = maxHitPoints;
+        }
+    }
+
+    public String takeDamage(int damage) {
+        hitPoints -= damage;
+        if(hitPoints <= 0){
+            return "dead!";
+        } else {
+            return "hurt!";
         }
     }
 }

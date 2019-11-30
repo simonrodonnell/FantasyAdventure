@@ -2,12 +2,12 @@ import game.Game;
 import game.players.Player;
 import game.players.characterclasses.CharacterClass;
 import game.players.characterclasses.Warrior;
-import game.players.characterclasses.types.WarriorTypes;
-import game.players.characterclasses.types.WeaponTypes;
+import game.players.characterclasses.characterSpecials.WarriorTypes;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -102,12 +102,12 @@ public class GameTest {
         assertEquals(0, game.getRooms().get(0).getMonsters().size());
     }
 
-    @Test
-    public void canFight(){
-        ArrayList<Player> players = game.getPlayers();
-        players.add(player);
-        Monster monster1 = new Monster(MonsterTypes.GOBLIN);
-
-        game.fight(players, monster1);
-    }
+//    @Test
+//    public void canFight(){
+//        ArrayList<Player> players = game.getPlayers();
+//        players.add(player);
+//        Monster monster1 = new Monster(MonsterTypes.GOBLIN);
+//
+//        game.fight(players, monster1);
+//    }
 }

@@ -1,6 +1,6 @@
 package game.rooms;
 
-import game.rooms.enemies.Monster;
+import game.enemies.Monster;
 
 import java.util.ArrayList;
 
@@ -45,10 +45,12 @@ public class Room {
         treasure.add(newTreasure);
     }
 
+    // n.b method just for testing purposes
     public void killAllMonsters() {
         this.monsters.clear();
     }
 
+    // n.b method just for testing purposes
     public void removeAllTreasure() {
         this.treasure.clear();
     }

@@ -1,11 +1,9 @@
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 

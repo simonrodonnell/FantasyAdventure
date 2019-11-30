@@ -1,4 +1,4 @@
-package game.players.characterclasses.types;
+package game.players.characterclasses.characterSpecials;
 
 public enum SpellType {
 

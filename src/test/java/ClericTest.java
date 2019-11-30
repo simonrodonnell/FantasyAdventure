@@ -1,10 +1,10 @@
 import game.players.Player;
 import game.players.characterclasses.CharacterClass;
 import game.players.characterclasses.Cleric;
-import game.players.characterclasses.types.HealingTool;
+import game.players.characterclasses.characterSpecials.HealingTool;
 import game.players.characterclasses.Warrior;
-import game.players.characterclasses.types.WarriorTypes;
-import game.players.characterclasses.types.WeaponTypes;
+import game.players.characterclasses.characterSpecials.WarriorTypes;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
 import org.junit.Before;
 import org.junit.Test;
 

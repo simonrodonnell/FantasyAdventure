@@ -3,9 +3,9 @@ package game.players.characterclasses;
 import game.behaviours.Dice;
 import game.behaviours.IAttack;
 import game.players.Player;
-import game.players.characterclasses.types.HealingTool;
-import game.players.characterclasses.types.WeaponTypes;
-import game.rooms.enemies.Monster;
+import game.players.characterclasses.characterSpecials.HealingTool;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
+import game.enemies.Monster;
 
 public class Cleric extends CharacterClass implements IAttack {
 

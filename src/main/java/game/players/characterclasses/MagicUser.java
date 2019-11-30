@@ -2,10 +2,10 @@ package game.players.characterclasses;
 
 import game.behaviours.Dice;
 import game.behaviours.IAttack;
-import game.players.characterclasses.types.SpellType;
-import game.players.characterclasses.types.Creature;
-import game.players.characterclasses.types.MagicUserType;
-import game.rooms.enemies.Monster;
+import game.players.characterclasses.characterSpecials.SpellType;
+import game.players.characterclasses.characterSpecials.Creature;
+import game.players.characterclasses.characterSpecials.MagicUserType;
+import game.enemies.Monster;
 
 public class MagicUser extends CharacterClass implements IAttack {
 

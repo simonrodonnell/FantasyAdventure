@@ -1,8 +1,8 @@
 import game.players.characterclasses.Warrior;
-import game.players.characterclasses.types.WarriorTypes;
-import game.players.characterclasses.types.WeaponTypes;
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.players.characterclasses.characterSpecials.WarriorTypes;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
 

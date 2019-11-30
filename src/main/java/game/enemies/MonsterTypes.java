@@ -1,4 +1,4 @@
-package game.rooms.enemies;
+package game.enemies;
 
 public enum MonsterTypes {
     KOBOLD("Kobold", 1),

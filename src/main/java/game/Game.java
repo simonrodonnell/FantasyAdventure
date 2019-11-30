@@ -3,8 +3,8 @@ package game;
 import game.players.Player;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -125,29 +125,31 @@ public class Game {
         while(roomIndex < getRooms().size()){
             Room room = rooms.get(roomIndex);
             // fight monsters & get treasure
-            room.killAllMonsters(); //for test
-            room.removeAllTreasure(); //for test
+            room.killAllMonsters(); // n.b method just for testing purposes
+            room.removeAllTreasure(); // n.b method just for testing purposes
             roomIndex ++;
         }
         System.out.println("Well done, you have completed the quest!");
     }
 
-    public void fightAllMonsters(Room room){
-        int fightIndex = 0;
-        while(fightIndex < room.getMonsters().size()){
-            Monster monster = room.getMonsters().get(fightIndex);
-            fight(players, monster);
-            fightIndex ++;
+    public void loopThroughMonsters(Room room){
+        int combatIndex = 0;
+        while(combatIndex < room.getMonsters().size()){
+            Monster monster = room.getMonsters().get(combatIndex);
+            startCombat(players, monster);
+            combatIndex ++;
         }
     }
 
-    public void fight(ArrayList<Player> players, Monster monster) {
+    public void startCombat(ArrayList<Player> players, Monster monster) {
         int playerIndex = 0;
         while(playerIndex < players.size()){
-            Player player = players.get(playerIndex);
-            String result = player.getCharacterClass().attack(monster);
+            Player activePlayer = players.get(playerIndex);
+            String playerAttack = activePlayer.getCharacterClass().attack(monster);
+            String monsterAttack = monster.attack(activePlayer);
             playerIndex ++;
-            System.out.println(result);
+            System.out.println(playerAttack);
+            System.out.println(monsterAttack);
         }
     }
 

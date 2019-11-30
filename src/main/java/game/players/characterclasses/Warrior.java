@@ -2,9 +2,9 @@ package game.players.characterclasses;
 
 import game.behaviours.Dice;
 import game.behaviours.IAttack;
-import game.players.characterclasses.types.WeaponTypes;
-import game.players.characterclasses.types.WarriorTypes;
-import game.rooms.enemies.Monster;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
+import game.players.characterclasses.characterSpecials.WarriorTypes;
+import game.enemies.Monster;
 
 public class Warrior extends CharacterClass implements IAttack {
 

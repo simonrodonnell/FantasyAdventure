@@ -1,7 +1,14 @@
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
+import game.players.Player;
+import game.players.characterclasses.CharacterClass;
+import game.players.characterclasses.Warrior;
+import game.players.characterclasses.characterSpecials.WarriorTypes;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MonsterTest {
 
@@ -13,7 +20,9 @@ public class MonsterTest {
     }
 
     @Test
-    public void changeType(){
-
+    public void canAttack(){
+        CharacterClass characterClass = new Warrior(WarriorTypes.KNIGHT, WeaponTypes.BOW);
+        Player player = new Player("Eric", characterClass);
+        assertEquals("The Goblin does 1 points of damage. Eric is hurt!", monster.attack(player));
     }
 }

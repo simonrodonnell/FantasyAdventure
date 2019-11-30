@@ -1,9 +1,9 @@
-import game.players.characterclasses.types.SpellType;
+import game.players.characterclasses.characterSpecials.SpellType;
 import game.players.characterclasses.MagicUser;
-import game.players.characterclasses.types.Creature;
-import game.players.characterclasses.types.MagicUserType;
-import game.rooms.enemies.Monster;
-import game.rooms.enemies.MonsterTypes;
+import game.players.characterclasses.characterSpecials.Creature;
+import game.players.characterclasses.characterSpecials.MagicUserType;
+import game.enemies.Monster;
+import game.enemies.MonsterTypes;
 import org.junit.Before;
 import org.junit.Test;
 
