@@ -1,3 +1,4 @@
+import game.players.Player;
 import game.players.characterclasses.characterSpecials.SpellType;
 import game.players.characterclasses.MagicUser;
 import game.players.characterclasses.characterSpecials.Creature;
@@ -13,11 +14,13 @@ public class MagicUserTest {
 
     MagicUser magicUser;
     Monster monster;
+    Player player;
 
     @Before
     public void before(){
         magicUser = new MagicUser(MagicUserType.WARLOCK, SpellType.FIREBALL, Creature.YOSHI);
         monster = new Monster(MonsterTypes.GOBLIN);
+        player = new Player("Ethan", magicUser);
     }
 
     // N.B. GOBLIN HAS 3 HP
@@ -25,8 +28,8 @@ public class MagicUserTest {
 
     @Test
     public void canAttack(){
-        String result = magicUser.attack(monster);
-        assertEquals("You killed the Goblin!", result);
+        String result = magicUser.attack(player, monster);
+        assertEquals("Ethan killed the Goblin!", result);
         assertEquals(-12, monster.getHitPoints() );
     }
 

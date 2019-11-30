@@ -117,4 +117,16 @@ public class GameTest {
         Monster monster1 = new Monster(MonsterTypes.GOBLIN);
         game.combat(players, monster1, room, 0);
     }
+
+    @Test
+    public void canSelectMonstersForFighting(){
+        game.setDifficulty(2);
+        game.setNumberOfPlayers(2);
+        game.generateRooms();
+        Room room = game.getRooms().get(0);
+        ArrayList<Player> players = game.getPlayers();
+        players.add(player1);
+        players.add(player2);
+        game.selectMonsterToFight(room, 0);
+    }
 }

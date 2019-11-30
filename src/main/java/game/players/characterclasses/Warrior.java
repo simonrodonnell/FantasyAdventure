@@ -2,6 +2,7 @@ package game.players.characterclasses;
 
 import game.behaviours.Dice;
 import game.behaviours.IAttack;
+import game.players.Player;
 import game.players.characterclasses.characterSpecials.WeaponTypes;
 import game.players.characterclasses.characterSpecials.WarriorTypes;
 import game.enemies.Monster;
@@ -28,16 +29,16 @@ public class Warrior extends CharacterClass implements IAttack {
         this.weapon = newWeapon;
     }
 
-    public String attack(Monster monster){
+    public String attack(Player player, Monster monster){
         Dice dice = new Dice();
 //        int playerAttacks = dice.rollDice();
         int playerAttacks = 10; // FIXED VALUE FOR TESTING
 //        int enemyDefends = dice.rollDice();
         int enemyDefends = 5; // FIXED VALUE FOR TESTING
         if(playerAttacks > enemyDefends){
-            return monster.takeDamage(weapon.getDamage());
+            return monster.takeDamage(player, weapon.getDamage());
         } else {
-            return "You missed!";
+            return player.getName() + " missed!";
         }
     }
 }

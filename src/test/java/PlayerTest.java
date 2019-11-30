@@ -34,7 +34,7 @@ public class PlayerTest {
     @Test
     public void playerCanAttack(){
         Monster monster = new Monster(MonsterTypes.GOBLIN);
-        assertEquals("You hit the Goblin!", player.getCharacterClass().attack(monster));
+        assertEquals("Eric hit the Goblin! It has 1 hp left.", player.getCharacterClass().attack(player, monster));
     }
 
     @Test

@@ -6,6 +6,7 @@ import game.rooms.TreasureTypes;
 import game.enemies.Monster;
 import game.enemies.MonsterTypes;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -111,6 +112,22 @@ public class Game {
         System.out.println("Number of players?");
         String inputNumberOfPlayers = inputScanner.next();
         System.out.println("You have entered "+ inputNumberOfPlayers +" players.");
+
+        //Get player name:
+        System.out.println("Name?");
+        String player1name = inputScanner.next();
+        //Get player type:
+        System.out.println("Character Class? Select number:");
+        System.out.println("1. Dwarf");
+        System.out.println("2. Barbarian");
+        System.out.println("3. Knight");
+        System.out.println("4. Cleric");
+        System.out.println("5. Wizard");
+        System.out.println("6. Warlock");
+        System.out.println("7. Sorcerer");
+        System.out.println("8. Mage");
+        int playerType = inputScanner.nextInt();
+
         System.out.println("Difficulty lever?");
         String inputDifficulty = inputScanner.next();
         System.out.println("Difficulty set to "+ inputDifficulty +".");
@@ -135,6 +152,7 @@ public class Game {
     public void selectMonsterToFight(Room room, int monsterIndex){
         if(monsterIndex < room.getMonsters().size()){
         Monster monster = room.getMonsters().get(monsterIndex);
+            System.out.println("A "+ monster.getName() + " has appeared!");
         combat(players, monster, room, monsterIndex);
         } else {
         roomCompleted();
@@ -142,14 +160,14 @@ public class Game {
     }
 
     private void roomCompleted() {
-        System.out.println("Room Completed!!!!");
+        System.out.println("All the monsters are defeated. The room is complete!");
     }
 
     public void combat(ArrayList<Player> players, Monster monster, Room room, int monsterIndex) {
         int playerIndex = 0;
         while(playerIndex < players.size()){
             Player activePlayer = players.get(playerIndex);
-            String playerAttack = activePlayer.getCharacterClass().attack(monster);
+            String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster);
             System.out.println(playerAttack);
            if(monster.isNotDead())
            {String monsterAttack = monster.attack(activePlayer);

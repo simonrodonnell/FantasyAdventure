@@ -31,14 +31,14 @@ public class Cleric extends CharacterClass implements IAttack {
     }
 
 
-    public String attack(Monster monster){
+    public String attack(Player player, Monster monster){
         Dice dice = new Dice();
         int playerAttacks = dice.rollDice();
         int enemyDefends = dice.rollDice();
         if(playerAttacks > enemyDefends){
-            return monster.takeDamage(weapon.getDamage());
+            return monster.takeDamage(player, weapon.getDamage());
         } else {
-            return "You missed!";
+            return player.getName() + " missed!";
         }
     }
 }

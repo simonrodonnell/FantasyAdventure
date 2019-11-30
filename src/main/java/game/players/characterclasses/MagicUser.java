@@ -2,6 +2,7 @@ package game.players.characterclasses;
 
 import game.behaviours.Dice;
 import game.behaviours.IAttack;
+import game.players.Player;
 import game.players.characterclasses.characterSpecials.SpellType;
 import game.players.characterclasses.characterSpecials.Creature;
 import game.players.characterclasses.characterSpecials.MagicUserType;
@@ -40,16 +41,16 @@ public class MagicUser extends CharacterClass implements IAttack {
         this.creature = creature;
     }
 
-    public String attack(Monster monster){
+    public String attack(Player player, Monster monster){
         Dice dice = new Dice();
         int playerAttacks = 10; // for testing
 //        int playerAttacks = dice.rollDice();
         int enemyDefends = 5; // for testing
 //        int enemyDefends = dice.rollDice();
         if(playerAttacks > enemyDefends){
-            return monster.takeDamage(spell.getDamage());
+            return monster.takeDamage(player, spell.getDamage());
         } else {
-            return "You killed the enemy!";
+            return player.getName() + " missed!";
         }
     }
 

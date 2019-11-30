@@ -26,12 +26,12 @@ public class Monster {
         return hitPoints;
     }
 
-    public String takeDamage(int damage) {
+    public String takeDamage(Player player, int damage) {
         hitPoints -= damage;
         if(hitPoints <= 0){
-            return "You killed the "+ type.getName() +"!";
+            return player.getName() + " killed the "+ type.getName() +"!";
         } else {
-            return "You hit the "+ type.getName() +"!";
+            return player.getName() + " hit the "+ type.getName() +"! It has " + hitPoints + " hp left.";
         }
     }
 
@@ -43,7 +43,7 @@ public class Monster {
         int playerDefends = 5; // FIXED VALUE FOR TESTING
         if(monsterAttacks > playerDefends){
             String playerStatus = activePlayer.takeDamage(getDamage());
-            return "The " + type.getName() + " does "+ getDamage() +" points of damage. " + activePlayer.getName() + " is " + playerStatus;
+            return "The " + type.getName() + " does "+ getDamage() +" points of damage. " + activePlayer.getName() + " is " + playerStatus + " " + activePlayer.getHitPoints() + " hp left.";
         } else {
             return "The "+ type.getName() +" missed!";
         }
@@ -60,5 +60,9 @@ public class Monster {
 
     public boolean isNotDead() {
         return hitPoints > 0;
+    }
+
+    public String getName() {
+        return type.getName();
     }
 }
