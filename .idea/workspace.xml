@@ -2,38 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83489b66-19cb-45bf-95b8-62144afbf1a2" name="Default Changelist" comment="Added more monster types">
-      <change afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClassSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/FantasyAdventureRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FantasyAdventureRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/behaviours/IAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/behaviours/IAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/enemies/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/monsters/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/enemies/MonsterTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/monsters/MonsterTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/Creature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/HealingTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/HealingTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/rooms/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/rooms/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MagicUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MagicUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MonsterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MonsterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RoomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WarriorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClassSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClassSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/behaviours/IAttack.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/behaviours/IAttack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MagicUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MagicUserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PlayerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/WarriorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/WarriorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +58,9 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="game.rooms" />
       <recent name="game.players.characterclasses" />
@@ -93,13 +69,13 @@
       <recent name="game.rooms.enemies" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FantasyAdventureRunner">
+  <component name="RunManager" selected="JUnit.GameTest.userCanInputPlayerDetails">
     <configuration name="FantasyAdventureRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="game.FantasyAdventureRunner" />
+      <option name="MAIN_CLASS_NAME" value="FantasyAdventureRunner" />
       <module name="FantasyAdventure" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="game.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FantasyAdventureRunner" />
         <item itemvalue="JUnit.GameTest.userCanInputPlayerDetails" />
+        <item itemvalue="Application.FantasyAdventureRunner" />
         <item itemvalue="JUnit.GameTest.canSelectMonstersForFighting" />
         <item itemvalue="JUnit.All in FantasyAdventure" />
         <item itemvalue="JUnit.GameTest.canHaveFight" />
@@ -232,6 +208,10 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="809" y="645" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575117593009" />
+    <state x="409" y="248" width="461" height="306" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575156480043">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="409" y="248" width="461" height="306" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.800@0.0.1280.800" timestamp="1575156480043" />
     <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575027005592">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -240,26 +220,26 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="107" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1575046088200" />
-    <state width="1280" height="734" key="GridCell.Tab.0.bottom" timestamp="1575155590125">
+    <state width="960" height="734" key="GridCell.Tab.0.bottom" timestamp="1575157997961">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1920" height="1014" key="GridCell.Tab.0.bottom/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575128343614" />
-    <state width="1280" height="734" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575155590125" />
-    <state width="1280" height="734" key="GridCell.Tab.0.center" timestamp="1575155590123">
+    <state width="960" height="734" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575157997961" />
+    <state width="960" height="734" key="GridCell.Tab.0.center" timestamp="1575157997958">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1920" height="1014" key="GridCell.Tab.0.center/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575128343614" />
-    <state width="1280" height="734" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575155590123" />
-    <state width="1280" height="734" key="GridCell.Tab.0.left" timestamp="1575155590122">
+    <state width="960" height="734" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575157997958" />
+    <state width="960" height="734" key="GridCell.Tab.0.left" timestamp="1575157997957">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1920" height="1014" key="GridCell.Tab.0.left/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575128343613" />
-    <state width="1280" height="734" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575155590122" />
-    <state width="1280" height="734" key="GridCell.Tab.0.right" timestamp="1575155590124">
+    <state width="960" height="734" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575157997957" />
+    <state width="960" height="734" key="GridCell.Tab.0.right" timestamp="1575157997959">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1920" height="1014" key="GridCell.Tab.0.right/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575128343614" />
-    <state width="1280" height="734" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575155590124" />
+    <state width="960" height="734" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575157997959" />
     <state width="1920" height="1014" key="GridCell.Tab.1.bottom" timestamp="1575127029903">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

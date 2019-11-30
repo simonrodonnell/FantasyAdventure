@@ -1,4 +1,4 @@
-package game;
+import game.Game;
 
 class FantasyAdventureRunner {
     public static void main(String[] args) {

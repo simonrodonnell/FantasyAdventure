@@ -134,6 +134,5 @@ public class GameTest {
     public void userCanInputPlayerDetails(){
         CharacterClass playerInput = game.classSelector(1);
         System.out.println(playerInput);
-        assertEquals(playerInput, playerInput);
     }
 }

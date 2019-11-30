@@ -1,32 +1,35 @@
 package game.players.characterclasses;
 
+import game.players.characterclasses.characterSpecials.*;
+
 public enum CharacterClassSelection {
 
     // ## WARRIORS ##
-    DWARF("Dwarf"),
-    BARBARIAN("Barbarian"),
-    KNIGHT("Knight"),
+    DWARF("Dwarf", new Warrior(WarriorTypes.DWARF, WeaponTypes.AXE) ),
+    BARBARIAN("Barbarian", new Warrior(WarriorTypes.BARBARIAN, WeaponTypes.MACE ) ),
+    KNIGHT("Knight", new Warrior(WarriorTypes.KNIGHT, WeaponTypes.SWORD) ),
     // ## HEALERS ##
-    CLERIC("Cleric"),
+    CLERIC("Cleric", new Cleric(HealingTool.randomHealingTool())),
     // ## MAGIC USERS ##
-    WIZARD("Wizard"),
-    WARLOCK("Warlock"),
-    SORCERER("Sorcerer"),
-    MAGE("Mage");
+    WIZARD("Wizard", new MagicUser( MagicUserType.WIZARD, SpellType.LIGHTNINGBOLT, Creature.FLYINGDOG ) ),
+    WARLOCK("Warlock", new MagicUser( MagicUserType.WARLOCK, SpellType.FIREBALL, Creature.PEGASUS ) ),
+    SORCERER("Sorcerer", new MagicUser(MagicUserType.SORCERER, SpellType.FREEZE, Creature.YOSHI ) ),
+    MAGE("Mage", new MagicUser(MagicUserType.MAGE, SpellType.MAGICMISSILE, Creature.OGRE));
 
-    String name;
+    private final String name;
+    private final CharacterClass characterClass;
 
-    private CharacterClassSelection(String name){
+    private CharacterClassSelection(String name, CharacterClass characterClass){
         this.name = name;
+        this.characterClass = characterClass;
     }
 
     public String getName() {
         return name;
     }
 
-    public CharacterClassSelection[] getCharacterClassOptions(){
-        CharacterClassSelection[] allCharacterClassOptions = values();
-        return allCharacterClassOptions;
+    public CharacterClass getCharacterClassSetup(){
+        return characterClass;
     }
 
 }

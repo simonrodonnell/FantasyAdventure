@@ -109,15 +109,26 @@ public class Game {
 
     public void setupGame(){
     Scanner inputScanner = new Scanner(System.in);
+
+    // INTRODUCTION
+
         System.out.println("Welcome to CodeClan Fantasy Adventure");
+
+    // SETUP NUMBER OF PLAYERS
+
         System.out.println("Number of players?");
         String inputNumberOfPlayers = inputScanner.next();
         System.out.println("You have entered "+ inputNumberOfPlayers +" players.");
+        this.numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
 
-        //Get player name - needs to loop for inputNumberOfPlayers times
+    // SETUP PLAYER
+        // TODO => needs to loop for inputNumberOfPlayers times
+
+        //input player name
         System.out.println("Character Name?");
         String playerName = inputScanner.next();
-        //Get player type:
+
+        //input player class
         System.out.println("Character Class? Select number:");
         CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
         int index = 1;
@@ -126,56 +137,33 @@ public class Game {
             System.out.println(option);
             index ++;
         }
-            int playerClassInput = inputScanner.nextInt();
-            CharacterClass playerClass = classSelector(playerClassInput);
-            Player newPlayer = new Player(playerName, playerClass);
-            String playerType = allCharacterClasses[playerClassInput - 1].getName();
-            System.out.println("You have created " + playerName + " the " + playerType + ".");
+        // create player object
+        int playerClassInput = inputScanner.nextInt();
+        CharacterClass playerClass = classSelector(playerClassInput);
+        Player newPlayer = new Player(playerName, playerClass);
+        players.add(newPlayer);
 
+        // print out to user
+        String playerType = allCharacterClasses[playerClassInput - 1].getName();
+        System.out.println("You have created " + playerName + " the " + playerType + ".");
 
+    // SETUP DIFFICULTY LEVEL
 
         System.out.println("Difficulty level?");
         String inputDifficulty = inputScanner.next();
+        this.difficulty = Integer.parseInt(inputDifficulty);
         System.out.println("Difficulty set to "+ inputDifficulty +".");
 
-        this.difficulty = Integer.parseInt(inputDifficulty);
-        this.numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
+    // FINISH SETUP
         generateRooms();
+
+        selectMonsterToFight(rooms.get(0), 0);
     }
 
     public CharacterClass classSelector(int playerClassInput) {
-        if(playerClassInput == 1)
-        {
-            return new Warrior(WarriorTypes.DWARF, WeaponTypes.randomWeapon());
-        }
-        else if (playerClassInput == 2)
-        {
-            return new Warrior(WarriorTypes.BARBARIAN, WeaponTypes.randomWeapon());
-        }
-        else if (playerClassInput == 3)
-        {
-            return new Warrior(WarriorTypes.BARBARIAN, WeaponTypes.randomWeapon());
-        }
-        else if (playerClassInput == 4)
-        {
-            return new Cleric(HealingTool.randomHealingTool());
-        }
-        else if (playerClassInput == 5)
-        {
-            return new MagicUser(MagicUserType.WIZARD, SpellType.LIGHTNINGBOLT, Creature.randomCreature() );
-        }
-        else if (playerClassInput == 6)
-        {
-            return new MagicUser(MagicUserType.WARLOCK, SpellType.FIREBALL, Creature.randomCreature() );
-        }
-        else if (playerClassInput == 7)
-        {
-            return new MagicUser(MagicUserType.SORCERER, SpellType.FREEZE, Creature.randomCreature() );
-        }
-        else
-        {
-            return new MagicUser(MagicUserType.MAGE, SpellType.MAGICMISSILE, Creature.OGRE);
-        }
+        CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
+        System.out.println(allCharacterClasses[playerClassInput].getName());
+        return allCharacterClasses[playerClassInput].getCharacterClassSetup();
     }
 
     public void quest(){
@@ -207,6 +195,7 @@ public class Game {
     public void combat(ArrayList<Player> players, Monster monster, Room room, int monsterIndex) {
         int playerIndex = 0;
         while(playerIndex < players.size()){
+            // TODO => needs to loop through until monster is dead
             Player activePlayer = players.get(playerIndex);
             String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster);
             System.out.println(playerAttack);
