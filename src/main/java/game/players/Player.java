@@ -61,6 +61,14 @@ public class Player {
 
     }
 
+    public void setMaxHitPoints(int maxHitPoints) {
+        this.maxHitPoints = maxHitPoints;
+    }
+
+    public void setHitPoints(int hitPoints) {
+        this.hitPoints = hitPoints;
+    }
+
     public String takeTreasure(int treasure) {
         gold += treasure;
         return "has gained " + treasure + " gold";

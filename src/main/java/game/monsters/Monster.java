@@ -43,7 +43,7 @@ public class Monster {
 //        int playerDefends = 5; // FIXED VALUE FOR TESTING
         if(monsterAttacks > playerDefends){
             String playerStatus = activePlayer.takeDamage(getDamage());
-            return "The " + type.getName() + " does "+ getDamage() +" points of damage. " + activePlayer.getName() + " is " + playerStatus + " " + activePlayer.getHitPoints() + " hp left.";
+            return "The " + type.getName() + " does "+ getDamage() +" points of damage.";
         } else {
             return "The "+ type.getName() +" misses!";
         }

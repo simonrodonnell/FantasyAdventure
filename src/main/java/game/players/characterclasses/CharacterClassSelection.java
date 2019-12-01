@@ -12,8 +12,8 @@ public enum CharacterClassSelection {
     CLERIC("Cleric", new Cleric(HealingTool.randomHealingTool())),
     // ## MAGIC USERS ##
     WIZARD("Wizard", new MagicUser( MagicUserType.WIZARD, SpellType.LIGHTNINGBOLT, Creature.FLYINGDOG ) ),
-    WARLOCK("Warlock", new MagicUser( MagicUserType.WARLOCK, SpellType.FIREBALL, Creature.PEGASUS ) ),
-    SORCERER("Sorcerer", new MagicUser(MagicUserType.SORCERER, SpellType.FREEZE, Creature.YOSHI ) ),
+    WARLOCK("Warlock", new MagicUser( MagicUserType.WARLOCK, SpellType.FREEZE, Creature.PEGASUS ) ),
+    SORCERER("Sorcerer", new MagicUser(MagicUserType.SORCERER, SpellType.FIREBALL, Creature.YOSHI ) ),
     MAGE("Mage", new MagicUser(MagicUserType.MAGE, SpellType.MAGICMISSILE, Creature.OGRE));
 
     private final String name;

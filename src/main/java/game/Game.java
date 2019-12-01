@@ -8,6 +8,7 @@ import game.monsters.Monster;
 import game.monsters.MonsterTypes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -132,23 +133,24 @@ public class Game {
         System.out.println("Number of players? (1 - 3)");
         String inputNumberOfPlayers = inputScanner.next();
         numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
-        if (numberOfPlayers > 1) {
-            System.out.println("You have entered " + inputNumberOfPlayers + " players.");
-        } else {
-            System.out.println("You have entered " + inputNumberOfPlayers + " player.");
-        }
+//        if (numberOfPlayers > 1) {
+//            System.out.println("You have entered " + inputNumberOfPlayers + " players.");
+//        } else {
+//            System.out.println("You have entered " + inputNumberOfPlayers + " player.");
+//        }
+        System.out.println("===================================================================");
         int playerNumber = 1;
         while (players.size() < numberOfPlayers) {
             // SETUP PLAYER
 
             //input player name
-            System.out.println("\n");
-            System.out.println("Set up player " + playerNumber);
-            System.out.println("Character Name?");
+//            System.out.println("\n");
+            System.out.println("Setting up Player " + playerNumber);
+            System.out.println("Player "+ playerNumber +" Name?");
             String playerName = inputScanner.next();
-
+            System.out.println("===================================================================");
             //input player class
-            System.out.println("Character Class? Select number:");
+            System.out.println("Character Class? Select a number:");
             CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
             int index = 1;
             for (CharacterClassSelection characterClassSelector : allCharacterClasses) {
@@ -162,11 +164,15 @@ public class Game {
             CharacterClass playerClass = classSelector(playerClassInput);
             Player newPlayer = new Player(playerName, playerClass);
             players.add(newPlayer);
+            adjustHitPoints(newPlayer, playerClassInput);
 
             // print out to user
             String playerType = allCharacterClasses[playerClassInput - 1].getName();
             System.out.println("You have created " + playerName + " the " + playerType + ".");
-
+            System.out.println("Weapon: " + newPlayer.getCharacterClass().getWeaponName());
+            System.out.println("Hit points: " + newPlayer.getHitPoints());
+            System.out.println("\n");
+            System.out.println("===================================================================");
             playerNumber++;
         }
         // SETUP DIFFICULTY LEVEL
@@ -184,6 +190,12 @@ public class Game {
         quest();
     }
 
+    private void adjustHitPoints(Player newPlayer, int playerClassInput) {
+        ArrayList<Integer> hitPointsArray = new ArrayList<Integer>(Arrays.asList(80, 70, 60, 50, 45, 40, 35, 30));
+        newPlayer.setMaxHitPoints(hitPointsArray.get(playerClassInput - 1));
+        newPlayer.setHitPoints(hitPointsArray.get(playerClassInput - 1));
+    }
+
     public CharacterClass classSelector(int playerClassInput) {
         int index = playerClassInput - 1;
         CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
@@ -196,17 +208,42 @@ public class Game {
         for (Room activeRoom : rooms) {
             if (players.size() > 1) {
                 System.out.println("The players enter a new room...");
+                System.out.println("\n");
             } else {
                 System.out.println("The player enters a new room...");
+                System.out.println("\n");
             }
             combat(players, activeRoom, 0);
         }
+        System.out.println("\n");
+        System.out.println("                            _.--.\n" +
+                "                        _.-'_:-'||\n" +
+                "                    _.-'_.-::::'||\n" +
+                "               _.-:'_.-::::::'  ||\n" +
+                "             .'`-.-:::::::'     ||\n" +
+                "            /.'`;|:::::::'      ||_\n" +
+                "           ||   ||::::::'     _.;._'-._\n" +
+                "           ||   ||:::::'  _.-!oo @.!-._'-.\n" +
+                "           \\'.  ||:::::.-!()oo @!()@.-'_.|\n" +
+                "            '.'-;|:.-'.&$@.& ()$%-'o.'\\U||\n" +
+                "              `>'-.!@%()@'@_%-'_.-o _.|'||\n" +
+                "               ||-._'-.@.-'_.-' _.-o  |'||\n" +
+                "               ||=[ '-._.-\\U/.-'    o |'||\n" +
+                "               || '-.]=|| |'|      o  |'||\n" +
+                "               ||      || |'|        _| ';\n" +
+                "               ||      || |'|    _.-'_.-'\n" +
+                "               |'-._   || |'|_.-'_.-'\n" +
+                "                '-._'-.|| |' `_.-'\n" +
+                "                    '-.||_/.-'\n");
+        System.out.println("\n");
         System.out.println("Well done, you have completed the quest!");
         for (Player player : players) {
             if (player.getHitPoints() > 0) {
+                System.out.println("\n");
                 System.out.println(player.getName() + " has earned " + player.getGold() + " gold and gained " + player.getExperience() + " exp.");
             }
         }
+        gameOver();
     }
 
     public void combat(ArrayList<Player> players, Room room, int monsterIndex) {
@@ -222,7 +259,7 @@ public class Game {
                     System.out.println("\n");
                     System.out.println(activePlayer.getName() + " attacks...");
                     System.out.println("Choose your attack:");
-                    System.out.println("    1. Attack with " + activePlayer.getCharacterClass().getWeaponName() );
+                    System.out.println("    1. Attack with " + activePlayer.getCharacterClass().getWeaponName());
                     System.out.println("    2. Special Move");
                     int playerAttackIndex = inputScanner.nextInt();
                     System.out.println("\n");
@@ -234,7 +271,26 @@ public class Game {
                         System.out.println(monster.getName() + " attacks...");
                         String monsterAttack = monster.attack(activePlayer);
                         System.out.println(monsterAttack);
+                        System.out.println(activePlayer.getName() + " has " + activePlayer.getHitPoints() + " left.");
                         // check if player is dead
+                        if(activePlayer.getHitPoints() <= 0){
+                            System.out.println(activePlayer.getName() + " is dead!");
+                            System.out.println("                       ______\n" +
+                                    "                    .-\"      \"-.\n" +
+                                    "                   /            \\\n" +
+                                    "       _          |              |          _\n" +
+                                    "      ( \\         |,  .-.  .-.  ,|         / )\n" +
+                                    "       > \"=._     | )(__/  \\__)( |     _.=\" <\n" +
+                                    "      (_/\"=._\"=._ |/     /\\     \\| _.=\"_.=\"\\_)\n" +
+                                    "             \"=._ (_     ^^     _)\"_.=\"\n" +
+                                    "                 \"=\\__|IIIIII|__/=\"\n" +
+                                    "                _.=\"| \\IIIIII/ |\"=._\n" +
+                                    "      _     _.=\"_.=\"\\          /\"=._\"=._     _\n" +
+                                    "     ( \\_.=\"_.=\"     `--------`     \"=._\"=._/ )\n" +
+                                    "      > _.=\"                            \"=._ <\n" +
+                                    "     (_/                                    \\_)");
+                        }
+
                         if (allPlayersAreDead()) {
                             gameOver();
                         }
@@ -245,6 +301,8 @@ public class Game {
                         System.out.println(activePlayer.getName() + " " + newTreasure);
                         String newExperience = activePlayer.getExperienceReward(monster);
                         System.out.println(activePlayer.getName() + " " + newExperience);
+                        System.out.println("===================================================================");
+                        System.out.println("\n");
 
                         if (monsterIndex < room.getMonsters().size() - 1) {
                             monsterIndex++;
@@ -262,6 +320,7 @@ public class Game {
 
     private void roomCompleted() {
         System.out.println("All the monsters are defeated. The room is complete!");
+        System.out.println("\n");
     }
 
     // END GAME
@@ -276,7 +335,9 @@ public class Game {
 
     public void gameOver() {
         Scanner inputScanner = new Scanner(System.in);
+        System.out.println("\n");
         System.out.println("The quest is over.");
+        System.out.println("\n");
         System.out.println("===================================================================");
         System.out.println("\n");
         System.out.println("Play again? (y/n)");

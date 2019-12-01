@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43d20cd7-7202-45fd-a4b0-91a1acaa9b1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/monsters/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/monsters/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClassSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClassSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,41 +71,41 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser" timestamp="1575237945488">
+    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser" timestamp="1575239891278">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575237945488" />
-    <state width="1238" height="619" key="GridCell.Tab.0.bottom" timestamp="1575238568843">
+    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575239891278" />
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom" timestamp="1575242278168">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1575238271722">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271722" />
-    <state width="1238" height="619" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575238568843" />
-    <state width="1238" height="619" key="GridCell.Tab.0.center" timestamp="1575238568841">
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575242278168" />
+    <state width="1238" height="619" key="GridCell.Tab.0.center" timestamp="1575242278166">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1575238271718">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.center.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271718" />
-    <state width="1238" height="619" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575238568841" />
-    <state width="1238" height="619" key="GridCell.Tab.0.left" timestamp="1575238568840">
+    <state width="1238" height="619" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575242278166" />
+    <state width="1238" height="619" key="GridCell.Tab.0.left" timestamp="1575242278166">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1575238271717">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.left.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271717" />
-    <state width="1238" height="619" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575238568840" />
-    <state width="1238" height="619" key="GridCell.Tab.0.right" timestamp="1575238568842">
+    <state width="1238" height="619" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575242278166" />
+    <state width="1238" height="619" key="GridCell.Tab.0.right" timestamp="1575242278167">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1575238271722">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="619" key="GridCell.Tab.0.right.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271722" />
-    <state width="1238" height="619" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575238568842" />
+    <state width="1238" height="619" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575242278167" />
   </component>
 </project>

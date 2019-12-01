@@ -5,11 +5,11 @@ import java.util.Random;
 
 public enum WeaponTypes {
 
-    SWORD(3, "Sword"),
-    AXE(5, "Axe"),
-    STAFF(2, "Staff"),
-    BOW(2, "Bow"),
-    MACE(3, "Mace");
+    SWORD(7, "Sword"),
+    AXE(9, "Axe"),
+    STAFF(6, "Staff"),
+    BOW(6, "Bow"),
+    MACE(7, "Mace");
 
     private int damage;
     private String weaponName;
