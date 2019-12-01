@@ -115,7 +115,7 @@ public class GameTest {
         players.add(player1);
         players.add(player2);
         Monster monster1 = new Monster(MonsterTypes.GOBLIN);
-        game.combat(players, monster1, room, 0);
+        game.combat(players, room, 0);
     }
 
     @Test

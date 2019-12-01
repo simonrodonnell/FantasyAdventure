@@ -53,12 +53,15 @@ public class Player {
         }
     }
 
-    public void getExperienceReward(Monster monster) {
-        int rating = monster.getType().getHitPoints();
-        experience += rating * 10;
+    public String getExperienceReward(Monster monster) {
+        int expGained = monster.getType().getHitPoints() * 10;
+        experience += expGained;
+        return "has gained " + expGained +" exp!";
+
     }
 
-    public void takeTreasure(int treasure) {
+    public String takeTreasure(int treasure) {
         gold += treasure;
+        return "has gained " + treasure + " gold";
     }
 }

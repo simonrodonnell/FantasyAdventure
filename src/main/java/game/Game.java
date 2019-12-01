@@ -19,7 +19,7 @@ public class Game {
     private int difficulty;
     private int numberOfPlayers;
 
-    public Game(){
+    public Game() {
         this.players = new ArrayList<Player>();
         this.rooms = new ArrayList<Room>();
         this.difficulty = 1;
@@ -75,53 +75,50 @@ public class Game {
     public void addMonsterToRoom(Room room) {
         int loopCount = 0;
         int combinedDifficulty = difficulty * numberOfPlayers;
-        while(loopCount < combinedDifficulty)
-        {
-        room.addMonster(randomMonster());
-        loopCount ++;
+        while (loopCount < combinedDifficulty) {
+            room.addMonster(randomMonster());
+            loopCount++;
         }
     }
 
     public void addTreasureToRoom(Room room) {
         int loopCount = 0;
         int combinedDifficulty = difficulty * numberOfPlayers;
-        while(loopCount < combinedDifficulty)
-        {
-        room.addTreasure(randomTreasure());
-            loopCount ++;
+        while (loopCount < combinedDifficulty) {
+            room.addTreasure(randomTreasure());
+            loopCount++;
         }
     }
 
     public void generateRooms() {
         int loopCount = 0;
         int combinedDifficulty = difficulty * numberOfPlayers;
-        while(loopCount < combinedDifficulty)
-        {
+        while (loopCount < combinedDifficulty) {
             Room room = new Room();
             rooms.add(room);
-            loopCount ++;
+            loopCount++;
         }
-        for(Room room : rooms){
-        addMonsterToRoom(room);
-        addTreasureToRoom(room);
+        for (Room room : rooms) {
+            addMonsterToRoom(room);
+            addTreasureToRoom(room);
         }
     }
 
-    public void setupGame(){
-    Scanner inputScanner = new Scanner(System.in);
+    public void setupGame() {
+        Scanner inputScanner = new Scanner(System.in);
 
-    // INTRODUCTION
+        // INTRODUCTION
 
         System.out.println("Welcome to CodeClan Fantasy Adventure");
 
-    // SETUP NUMBER OF PLAYERS
+        // SETUP NUMBER OF PLAYERS
 
         System.out.println("Number of players?");
         String inputNumberOfPlayers = inputScanner.next();
-        System.out.println("You have entered "+ inputNumberOfPlayers +" players.");
+        System.out.println("You have entered " + inputNumberOfPlayers + " players.");
         this.numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
 
-    // SETUP PLAYER
+        // SETUP PLAYER
         // TODO => needs to loop for inputNumberOfPlayers times
 
         //input player name
@@ -132,10 +129,10 @@ public class Game {
         System.out.println("Character Class? Select number:");
         CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
         int index = 1;
-        for(CharacterClassSelection characterClassSelector: allCharacterClasses) {
+        for (CharacterClassSelection characterClassSelector : allCharacterClasses) {
             String option = "    " + index + ". " + characterClassSelector.getName();
             System.out.println(option);
-            index ++;
+            index++;
         }
         // create player object
         int playerClassInput = inputScanner.nextInt();
@@ -147,14 +144,14 @@ public class Game {
         String playerType = allCharacterClasses[playerClassInput - 1].getName();
         System.out.println("You have created " + playerName + " the " + playerType + ".");
 
-    // SETUP DIFFICULTY LEVEL
+        // SETUP DIFFICULTY LEVEL
 
         System.out.println("Difficulty level?");
         String inputDifficulty = inputScanner.next();
         this.difficulty = Integer.parseInt(inputDifficulty);
-        System.out.println("Difficulty set to "+ inputDifficulty +".");
+        System.out.println("Difficulty set to " + inputDifficulty + ".");
 
-    // FINISH SETUP
+        // FINISH SETUP
         generateRooms();
 
         selectMonsterToFight(rooms.get(0), 0);
@@ -166,25 +163,25 @@ public class Game {
         return allCharacterClasses[playerClassInput].getCharacterClassSetup();
     }
 
-    public void quest(){
+    public void quest() {
         int roomIndex = 0;
-        while(roomIndex < getRooms().size()){
+        while (roomIndex < getRooms().size()) {
             Room room = rooms.get(roomIndex);
             // fight monsters & get treasure
             room.killAllMonsters(); // n.b method just for testing purposes
             room.removeAllTreasure(); // n.b method just for testing purposes
-            roomIndex ++;
+            roomIndex++;
         }
         System.out.println("Well done, you have completed the quest!");
     }
 
-    public void selectMonsterToFight(Room room, int monsterIndex){
-        if(monsterIndex < room.getMonsters().size()){
-        Monster monster = room.getMonsters().get(monsterIndex);
-            System.out.println("A "+ monster.getName() + " has appeared!");
-        combat(players, monster, room, monsterIndex);
+    public void selectMonsterToFight(Room room, int monsterIndex) {
+        if (monsterIndex < room.getMonsters().size()) {
+            Monster monster = room.getMonsters().get(monsterIndex);
+            System.out.println("A " + monster.getName() + " has appeared!");
+            combat(players, room, monsterIndex);
         } else {
-        roomCompleted();
+            roomCompleted();
         }
     }
 
@@ -192,28 +189,40 @@ public class Game {
         System.out.println("All the monsters are defeated. The room is complete!");
     }
 
-    public void combat(ArrayList<Player> players, Monster monster, Room room, int monsterIndex) {
-        int playerIndex = 0;
-        while(playerIndex < players.size()){
-            // TODO => needs to loop through until monster is dead
-            Player activePlayer = players.get(playerIndex);
-            String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster);
-            System.out.println(playerAttack);
-           if(monster.isNotDead())
-           {String monsterAttack = monster.attack(activePlayer);
-           System.out.println(monsterAttack);
-           playerIndex ++;
-           } else {
-               System.out.println("The monster has been defeated.");
-               int treasure  = room.getTreasure().get(monsterIndex).getGoldValue();
-               activePlayer.takeTreasure(treasure);
-               activePlayer.getExperienceReward(monster);
-//               room.removeMonster(monster);
-//               room.removeTreasure();
-               monsterIndex ++;
-               selectMonsterToFight(room, monsterIndex);
-               break;
-           }
-        } playerIndex ++;
+    public void combat(ArrayList<Player> players, Room room, int monsterIndex) {
+        // Select monster todo => room complete
+        Monster monster = room.getMonsters().get(monsterIndex);
+        System.out.println("A " + monster.getName() + " appears!");
+        // continue until monster is dead
+        while (monster.getHitPoints() > 0) {
+            // Loop through players => TODO ignore dead players
+            for (Player activePlayer : players) {
+                if (activePlayer.getHitPoints() > 0) {
+                    System.out.println(activePlayer.getName() + " attacks");
+                    String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster);
+                    System.out.println(playerAttack);
+
+                    if (monster.isNotDead()) {
+                        System.out.println(monster.getName() + " attacks");
+                        String monsterAttack = monster.attack(activePlayer);
+                        System.out.println(monsterAttack);
+
+                    } else {
+                        System.out.println("The monster has been defeated.");
+                        int treasure = room.getTreasure().get(monsterIndex).getGoldValue();
+                        String newTreasure = activePlayer.takeTreasure(treasure);
+                        System.out.println(activePlayer.getName() + " " + newTreasure);
+                        String newExperience = activePlayer.getExperienceReward(monster);
+                        System.out.println(activePlayer.getName() + " " + newExperience);
+
+                        if (monsterIndex < room.getMonsters().size() - 1) {
+                            monsterIndex++;
+                            combat(players, room, monsterIndex);
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
