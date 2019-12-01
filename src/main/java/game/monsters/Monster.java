@@ -37,10 +37,10 @@ public class Monster {
 
     public String attack(Player activePlayer) {
         Dice dice = new Dice();
-//        int monsterAttacks = dice.rollDice();
-//        int playerDefends = dice.rollDice();
-        int monsterAttacks = 10; // FIXED VALUE FOR TESTING
-        int playerDefends = 5; // FIXED VALUE FOR TESTING
+        int monsterAttacks = dice.rollDice();
+        int playerDefends = dice.rollDice();
+//        int monsterAttacks = 10; // FIXED VALUE FOR TESTING
+//        int playerDefends = 5; // FIXED VALUE FOR TESTING
         if(monsterAttacks > playerDefends){
             String playerStatus = activePlayer.takeDamage(getDamage());
             return "The " + type.getName() + " does "+ getDamage() +" points of damage. " + activePlayer.getName() + " is " + playerStatus + " " + activePlayer.getHitPoints() + " hp left.";
