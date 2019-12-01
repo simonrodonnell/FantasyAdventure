@@ -6,7 +6,7 @@ import game.players.Player;
 public abstract class CharacterClass {
 
 
-    public String attack(Player player, Monster monster){
+    public String attack(Player player, Monster monster, int playerAttackIndex){
         return "Attack!";
     }
 

@@ -118,17 +118,17 @@ public class GameTest {
         game.combat(players, room, 0);
     }
 
-    @Test
-    public void canSelectMonstersForFighting(){
-        game.setDifficulty(2);
-        game.setNumberOfPlayers(2);
-        game.generateRooms();
-        Room room = game.getRooms().get(0);
-        ArrayList<Player> players = game.getPlayers();
-        players.add(player1);
-        players.add(player2);
-        game.selectMonsterToFight(room, 0);
-    }
+//    @Test
+//    public void canSelectMonstersForFighting(){
+//        game.setDifficulty(2);
+//        game.setNumberOfPlayers(2);
+//        game.generateRooms();
+//        Room room = game.getRooms().get(0);
+//        ArrayList<Player> players = game.getPlayers();
+//        players.add(player1);
+//        players.add(player2);
+//        game.selectMonsterToFight(room, 0);
+//    }
 
     @Test
     public void userCanInputPlayerDetails(){

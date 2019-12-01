@@ -41,16 +41,16 @@ public class MagicUser extends CharacterClass implements IAttack {
         this.creature = creature;
     }
 
-    public String attack(Player player, Monster monster){
+    public String attack(Player player, Monster monster, int playerAttackIndex){
         Dice dice = new Dice();
-        int playerAttacks = 10; // for testing
-//        int playerAttacks = dice.rollDice();
-        int enemyDefends = 5; // for testing
-//        int enemyDefends = dice.rollDice();
+//        int playerAttacks = 10; // for testing
+//        int enemyDefends = 5; // for testing
+        int playerAttacks = dice.rollDice();
+        int enemyDefends = dice.rollDice() + playerAttackIndex;
         if(playerAttacks > enemyDefends){
-            return monster.takeDamage(player, spell.getDamage());
+            return monster.takeDamage(player, (spell.getDamage() * playerAttackIndex));
         } else {
-            return player.getName() + " missed!";
+            return player.getName() + " misses!";
         }
     }
 

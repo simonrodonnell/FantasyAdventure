@@ -28,7 +28,8 @@ public class MagicUserTest {
 
     @Test
     public void canAttack(){
-        String result = magicUser.attack(player, monster);
+        int playerAttackIndex = 1;
+        String result = magicUser.attack(player, monster, playerAttackIndex);
         assertEquals("Ethan killed the Goblin!", result);
         assertEquals(-12, monster.getHitPoints() );
     }

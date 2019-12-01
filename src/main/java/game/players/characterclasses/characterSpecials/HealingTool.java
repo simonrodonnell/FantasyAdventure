@@ -18,7 +18,7 @@ public enum HealingTool {
     public static HealingTool randomHealingTool() {
         HealingTool[] allHealingTools = values();
         Random randomNumber = new Random();
-        int randomInt = randomNumber.nextInt(allHealingTools.length + 1);
+        int randomInt = randomNumber.nextInt(allHealingTools.length);
         return allHealingTools[randomInt];
     }
 

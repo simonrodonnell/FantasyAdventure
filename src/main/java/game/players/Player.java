@@ -64,4 +64,8 @@ public class Player {
         gold += treasure;
         return "has gained " + treasure + " gold";
     }
+
+    public int getExperience() {
+        return experience;
+    }
 }

@@ -29,16 +29,16 @@ public class Warrior extends CharacterClass implements IAttack {
         this.weapon = newWeapon;
     }
 
-    public String attack(Player player, Monster monster){
+    public String attack(Player player, Monster monster, int playerAttackIndex){
         Dice dice = new Dice();
-//        int playerAttacks = dice.rollDice();
-//        int enemyDefends = dice.rollDice();
-        int playerAttacks = 10; // FIXED VALUE FOR TESTING
-        int enemyDefends = 5; // FIXED VALUE FOR TESTING
+        int playerAttacks = dice.rollDice();
+        int enemyDefends = dice.rollDice();
+//        int playerAttacks = 10; // FIXED VALUE FOR TESTING
+//        int enemyDefends = 5; // FIXED VALUE FOR TESTING
         if(playerAttacks > enemyDefends){
             return monster.takeDamage(player, weapon.getDamage());
         } else {
-            return player.getName() + " missed!";
+            return player.getName() + " misses!";
         }
     }
 }
