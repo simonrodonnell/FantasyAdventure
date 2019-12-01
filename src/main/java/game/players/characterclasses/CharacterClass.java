@@ -2,6 +2,7 @@ package game.players.characterclasses;
 
 import game.monsters.Monster;
 import game.players.Player;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
 
 public abstract class CharacterClass {
 
@@ -10,4 +11,5 @@ public abstract class CharacterClass {
         return "Attack!";
     }
 
+    public abstract String getWeaponName();
 }

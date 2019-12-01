@@ -12,7 +12,7 @@ public class Cleric extends CharacterClass implements IAttack {
     private HealingTool healingTool;
     private WeaponTypes weapon;
 
-    public Cleric(HealingTool healingTool){
+    public Cleric(HealingTool healingTool) {
         this.healingTool = healingTool;
         this.weapon = WeaponTypes.STAFF;
     }
@@ -25,20 +25,27 @@ public class Cleric extends CharacterClass implements IAttack {
         this.healingTool = healingTool;
     }
 
-    public String healPlayer(Player player){
+    public String healPlayer(Player player) {
         player.heal(healingTool.getHealingFactor());
         return player.getName() + " has been healed by " + healingTool.getHealingFactor() + " points";
     }
 
-
-    public String attack(Player player, Monster monster, int playerAttackIndex){
+    public String attack(Player player, Monster monster, int playerAttackIndex) {
         Dice dice = new Dice();
         int playerAttacks = dice.rollDice();
         int enemyDefends = dice.rollDice();
-        if(playerAttacks > enemyDefends){
+        if (playerAttacks > enemyDefends) {
             return monster.takeDamage(player, weapon.getDamage());
         } else {
             return player.getName() + " misses!";
         }
+    }
+
+    public WeaponTypes getWeapon() {
+        return weapon;
+    }
+
+    public String getWeaponName() {
+        return weapon.getWeaponName();
     }
 }

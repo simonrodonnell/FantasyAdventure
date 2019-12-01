@@ -129,10 +129,14 @@ public class Game {
         System.out.println("\n");
         // SETUP NUMBER OF PLAYERS
 
-        System.out.println("Number of players?");
+        System.out.println("Number of players? (1 - 3)");
         String inputNumberOfPlayers = inputScanner.next();
-        System.out.println("You have entered " + inputNumberOfPlayers + " players.");
-        this.numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
+        numberOfPlayers = Integer.parseInt(inputNumberOfPlayers);
+        if (numberOfPlayers > 1) {
+            System.out.println("You have entered " + inputNumberOfPlayers + " players.");
+        } else {
+            System.out.println("You have entered " + inputNumberOfPlayers + " player.");
+        }
         int playerNumber = 1;
         while (players.size() < numberOfPlayers) {
             // SETUP PLAYER
@@ -167,7 +171,7 @@ public class Game {
         }
         // SETUP DIFFICULTY LEVEL
 
-        System.out.println("Difficulty level?");
+        System.out.println("Difficulty level? (1 - 5)");
         String inputDifficulty = inputScanner.next();
         this.difficulty = Integer.parseInt(inputDifficulty);
         System.out.println("Difficulty set to " + inputDifficulty + ".");
@@ -186,6 +190,8 @@ public class Game {
         return allCharacterClasses[index].getCharacterClassSetup();
     }
 
+    // START GAME
+
     public void quest() {
         for (Room activeRoom : rooms) {
             if (players.size() > 1) {
@@ -196,15 +202,11 @@ public class Game {
             combat(players, activeRoom, 0);
         }
         System.out.println("Well done, you have completed the quest!");
-        for(Player player : players){
-            if(player.getHitPoints() > 0){
-                System.out.println(player.getName() + " has earned " + player.getGold() + " gold and gained " + player.getExperience() + "experience points.");
+        for (Player player : players) {
+            if (player.getHitPoints() > 0) {
+                System.out.println(player.getName() + " has earned " + player.getGold() + " gold and gained " + player.getExperience() + " exp.");
             }
         }
-    }
-
-    private void roomCompleted() {
-        System.out.println("All the monsters are defeated. The room is complete!");
     }
 
     public void combat(ArrayList<Player> players, Room room, int monsterIndex) {
@@ -217,15 +219,18 @@ public class Game {
             // Loop through players
             for (Player activePlayer : players) {
                 if (activePlayer.getHitPoints() > 0) {
+                    System.out.println("\n");
                     System.out.println(activePlayer.getName() + " attacks...");
                     System.out.println("Choose your attack:");
-                    System.out.println("1. Regular Attack");
-                    System.out.println("2. Special Attack");
+                    System.out.println("    1. Attack with " + activePlayer.getCharacterClass().getWeaponName() );
+                    System.out.println("    2. Special Move");
                     int playerAttackIndex = inputScanner.nextInt();
+                    System.out.println("\n");
                     String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster, playerAttackIndex);
                     System.out.println(playerAttack);
 
                     if (monster.isNotDead()) {
+                        System.out.println("\n");
                         System.out.println(monster.getName() + " attacks...");
                         String monsterAttack = monster.attack(activePlayer);
                         System.out.println(monsterAttack);
@@ -254,6 +259,12 @@ public class Game {
             }
         }
     }
+
+    private void roomCompleted() {
+        System.out.println("All the monsters are defeated. The room is complete!");
+    }
+
+    // END GAME
 
     private boolean allPlayersAreDead() {
         int totalHitpoints = 0;

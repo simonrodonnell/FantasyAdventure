@@ -1,135 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83489b66-19cb-45bf-95b8-62144afbf1a2" name="Default Changelist" comment="Added more monster types">
+    <list default="true" id="43d20cd7-7202-45fd-a4b0-91a1acaa9b1e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/behaviours/IAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/behaviours/IAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/monsters/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/monsters/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/CharacterClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Cleric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/MagicUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/Warrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MagicUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MagicUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WarriorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/SpellType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/players/characterclasses/characterSpecials/WeaponTypes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
->>>>>>> 93015ac86e62e9b65d8ab7ac847c1791ebea6217
+      <change beforePath="$PROJECT_DIR$/target/classes/game/players/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/CharacterClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Cleric.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/MagicUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/players/characterclasses/Warrior.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="293" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="FantasyAdventureHW" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="Enum" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1UEzZlBlLH0V0ztPYTaM3kpBdTQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1UOlW0c0FjXnSX1iqwIQSxQuxE0" />
   <component name="ProjectViewState">
-    <option name="abbreviatePackageNames" value="true" />
-    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="full.screen.before.presentation.mode" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="game.rooms" />
-      <recent name="game.players.characterclasses" />
-      <recent name="game.players.characterclass" />
-      <recent name="game.players.attackmethods" />
-      <recent name="game.rooms.enemies" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.FantasyAdventureRunner">
+  <component name="RunManager">
     <configuration name="FantasyAdventureRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FantasyAdventureRunner" />
       <module name="FantasyAdventure" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.canHaveFight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FantasyAdventure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="canHaveFight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.canSelectMonstersForFighting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FantasyAdventure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="canSelectMonstersForFighting" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.userCanInputPlayerDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FantasyAdventure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="userCanInputPlayerDetails" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarriorTest.canAttack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FantasyAdventure" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WarriorTest" />
-      <option name="METHOD_NAME" value="canAttack" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,10 +50,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.FantasyAdventureRunner" />
-        <item itemvalue="JUnit.WarriorTest.canAttack" />
-        <item itemvalue="JUnit.GameTest.canHaveFight" />
-        <item itemvalue="JUnit.GameTest.userCanInputPlayerDetails" />
-        <item itemvalue="JUnit.GameTest.canSelectMonstersForFighting" />
       </list>
     </recent_temporary>
   </component>
@@ -161,173 +70,50 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="83489b66-19cb-45bf-95b8-62144afbf1a2" name="Default Changelist" comment="" />
-      <created>1574936599186</created>
+      <changelist id="43d20cd7-7202-45fd-a4b0-91a1acaa9b1e" name="Default Changelist" comment="" />
+      <created>1575235559448</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574936599186</updated>
+      <updated>1575235559448</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added more monster types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more monster types" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="2" key="#All_in_FantasyAdventureLab" timestamp="1575023243284">
+    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser" timestamp="1575237945488">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="221" y="2" key="#All_in_FantasyAdventureLab/0.0.1280.800@0.0.1280.800" timestamp="1575023243284" />
-    <state x="240" y="64" key="#Project_Structure" timestamp="1575023042642">
+    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575237945488" />
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom" timestamp="1575238568843">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="64" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1575023042642" />
-    <state x="100" y="100" width="1117" height="630" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1575049814597">
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom.inPresentationMode" timestamp="1575238271722">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="100" y="100" width="1117" height="630" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1280.800@0.0.1280.800" timestamp="1575049814597" />
-    <state x="374" y="199" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575041724514">
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271722" />
+    <state width="1238" height="619" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575238568843" />
+    <state width="1238" height="619" key="GridCell.Tab.0.center" timestamp="1575238568841">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="374" y="199" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1575041724514" />
-    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser" timestamp="1575154807067">
+    <state width="1238" height="619" key="GridCell.Tab.0.center.inPresentationMode" timestamp="1575238271718">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="453" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1575154807066" />
-    <state x="1502" y="540" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575202466190">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="1502" y="540" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575202466190" />
-    <state x="562" y="342" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.800@0.0.1280.800" timestamp="1575143296496" />
-    <state x="328" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575022876216">
+    <state width="1238" height="619" key="GridCell.Tab.0.center.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271718" />
+    <state width="1238" height="619" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575238568841" />
+    <state width="1238" height="619" key="GridCell.Tab.0.left" timestamp="1575238568840">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="328" y="135" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1280.800@0.0.1280.800" timestamp="1575022876216" />
-    <state x="809" y="645" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1575117593009">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="809" y="645" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575117593009" />
-    <state x="409" y="248" width="461" height="306" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1575156480043">
+    <state width="1238" height="619" key="GridCell.Tab.0.left.inPresentationMode" timestamp="1575238271717">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="409" y="248" width="461" height="306" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.800@0.0.1280.800" timestamp="1575156480043" />
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1575027005592">
+    <state width="1238" height="619" key="GridCell.Tab.0.left.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271717" />
+    <state width="1238" height="619" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575238568840" />
+    <state width="1238" height="619" key="GridCell.Tab.0.right" timestamp="1575238568842">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="382" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.800@0.0.1280.800" timestamp="1575027005592" />
-    <state x="107" y="0" key="CommitChangelistDialog2" timestamp="1575046088200">
+    <state width="1238" height="619" key="GridCell.Tab.0.right.inPresentationMode" timestamp="1575238271722">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="107" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1575046088200" />
-<<<<<<< HEAD
-    <state width="1280" height="734" key="GridCell.Tab.0.bottom" timestamp="1575200586455">
-      <screen x="0" y="23" width="1280" height="777" />
-=======
-    <state width="1920" height="1014" key="GridCell.Tab.0.bottom" timestamp="1575212801532">
-      <screen x="0" y="0" width="2560" height="1440" />
->>>>>>> 93015ac86e62e9b65d8ab7ac847c1791ebea6217
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.0.bottom/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575212801532" />
-    <state width="1280" height="734" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575200491931" />
-<<<<<<< HEAD
-    <state width="1280" height="734" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1575200586455" />
-    <state width="1280" height="734" key="GridCell.Tab.0.center" timestamp="1575200586454">
-      <screen x="0" y="23" width="1280" height="777" />
-=======
-    <state width="1920" height="1014" key="GridCell.Tab.0.center" timestamp="1575212801531">
-      <screen x="0" y="0" width="2560" height="1440" />
->>>>>>> 93015ac86e62e9b65d8ab7ac847c1791ebea6217
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.0.center/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575212801531" />
-    <state width="1280" height="734" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575200491928" />
-<<<<<<< HEAD
-    <state width="1280" height="734" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1575200586454" />
-    <state width="1280" height="734" key="GridCell.Tab.0.left" timestamp="1575200586447">
-      <screen x="0" y="23" width="1280" height="777" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.0.left/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575128343613" />
-    <state width="1280" height="734" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575200586447" />
-    <state width="1280" height="734" key="GridCell.Tab.0.right" timestamp="1575200586454">
-      <screen x="0" y="23" width="1280" height="777" />
-=======
-    <state width="1920" height="1014" key="GridCell.Tab.0.left" timestamp="1575212801531">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.0.left/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575212801531" />
-    <state width="1280" height="734" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575200491927" />
-    <state width="1920" height="1014" key="GridCell.Tab.0.right" timestamp="1575212801532">
-      <screen x="0" y="0" width="2560" height="1440" />
->>>>>>> 93015ac86e62e9b65d8ab7ac847c1791ebea6217
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.0.right/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575212801532" />
-    <state width="1280" height="734" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575200491930" />
-<<<<<<< HEAD
-    <state width="1280" height="734" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1575200586454" />
-    <state width="1920" height="1014" key="GridCell.Tab.1.bottom" timestamp="1575127029903">
-=======
-    <state width="1920" height="1014" key="GridCell.Tab.1.bottom" timestamp="1575207799889">
->>>>>>> 93015ac86e62e9b65d8ab7ac847c1791ebea6217
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.1.bottom/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575207799889" />
-    <state width="1920" height="1014" key="GridCell.Tab.1.center" timestamp="1575207799888">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.1.center/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575207799888" />
-    <state width="1920" height="1014" key="GridCell.Tab.1.left" timestamp="1575207799887">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.1.left/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575207799887" />
-    <state width="1920" height="1014" key="GridCell.Tab.1.right" timestamp="1575207799888">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state width="1920" height="1014" key="GridCell.Tab.1.right/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575207799888" />
-    <state x="-1451" y="301" key="SettingsEditor" timestamp="1575116640268">
-      <screen x="-1920" y="113" width="1920" height="1080" />
-    </state>
-    <state x="-1451" y="301" key="SettingsEditor/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575116640268" />
-    <state x="638" y="418" key="com.intellij.ide.util.TipDialog" timestamp="1575202467368">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="638" y="418" key="com.intellij.ide.util.TipDialog/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575202467368" />
-    <state x="319" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1575198040052" />
-    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575046041630">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="428" y="318" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1575046041630" />
-    <state x="-1920" y="113" width="1920" height="1062" maximized="true" key="dock-window-1" timestamp="1575116640627">
-      <screen x="-1920" y="113" width="1920" height="1080" />
-    </state>
-    <state x="-1920" y="113" width="1920" height="1062" maximized="true" key="dock-window-1/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575116640627" />
-    <state x="804" y="20" key="refactoring.ChangeSignatureDialog" timestamp="1575212319145">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="804" y="20" key="refactoring.ChangeSignatureDialog/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575212319145" />
-    <state x="402" y="11" key="refactoring.ChangeSignatureDialog/0.0.1280.800@0.0.1280.800" timestamp="1575046151883" />
-    <state x="945" y="345" key="run.anything.popup" timestamp="1575206128946">
-      <screen x="0" y="0" width="2560" height="1440" />
-    </state>
-    <state x="945" y="345" key="run.anything.popup/-1920.113.1920.1080/0.0.2560.1440@0.0.2560.1440" timestamp="1575206128946" />
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1575198399268">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1575198399268" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FantasyAdventure$GameTest_canHaveFight.ic" NAME="GameTest.canHaveFight Coverage Results" MODIFIED="1575122523069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <state width="1238" height="619" key="GridCell.Tab.0.right.inPresentationMode/0.0.1280.800@0.0.1280.800" timestamp="1575238271722" />
+    <state width="1238" height="619" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575238568842" />
   </component>
 </project>

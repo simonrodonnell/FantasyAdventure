@@ -5,16 +5,18 @@ import java.util.Random;
 
 public enum WeaponTypes {
 
-    SWORD(3),
-    AXE(5),
-    STAFF(2),
-    BOW(2),
-    MACE(3);
+    SWORD(3, "Sword"),
+    AXE(5, "Axe"),
+    STAFF(2, "Staff"),
+    BOW(2, "Bow"),
+    MACE(3, "Mace");
 
     private int damage;
+    private String weaponName;
 
-    WeaponTypes(int damage){
+    WeaponTypes(int damage, String weaponName) {
         this.damage = damage;
+        this.weaponName = weaponName;
     }
 
     public static WeaponTypes randomWeapon() {
@@ -24,7 +26,11 @@ public enum WeaponTypes {
         return allWeapons[randomInt];
     }
 
-    public int getDamage(){
+    public int getDamage() {
         return this.damage;
+    }
+
+    public String getWeaponName() {
+        return weaponName;
     }
 }

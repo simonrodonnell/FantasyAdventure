@@ -2,6 +2,7 @@ package game.players;
 
 import game.monsters.Monster;
 import game.players.characterclasses.CharacterClass;
+import game.players.characterclasses.characterSpecials.WeaponTypes;
 
 public class Player {
 
