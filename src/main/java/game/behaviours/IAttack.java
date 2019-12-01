@@ -5,6 +5,6 @@ import game.players.Player;
 
 public interface IAttack {
 
-    public String attack(Player player, Monster monster);
+    public String attack(Player player, Monster monster, int playerAttackIndex);
 
 }

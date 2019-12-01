@@ -2,7 +2,6 @@ package game;
 
 import game.players.Player;
 import game.players.characterclasses.*;
-import game.players.characterclasses.characterSpecials.*;
 import game.rooms.Room;
 import game.rooms.TreasureTypes;
 import game.monsters.Monster;
@@ -69,7 +68,6 @@ public class Game {
         Random random = new Random();
         int index = random.nextInt(treasureArray.length);
         return treasureArray[index];
-
     }
 
     public void addMonsterToRoom(Room room) {
@@ -165,7 +163,7 @@ public class Game {
             String playerType = allCharacterClasses[playerClassInput - 1].getName();
             System.out.println("You have created " + playerName + " the " + playerType + ".");
 
-            playerNumber ++;
+            playerNumber++;
         }
         // SETUP DIFFICULTY LEVEL
 
@@ -185,16 +183,24 @@ public class Game {
     public CharacterClass classSelector(int playerClassInput) {
         int index = playerClassInput - 1;
         CharacterClassSelection[] allCharacterClasses = CharacterClassSelection.values();
-//        System.out.println(allCharacterClasses[index].getName());
         return allCharacterClasses[index].getCharacterClassSetup();
     }
 
     public void quest() {
         for (Room activeRoom : rooms) {
-            System.out.println("A new room");
+            if (players.size() > 1) {
+                System.out.println("The players enter a new room...");
+            } else {
+                System.out.println("The player enters a new room...");
+            }
             combat(players, activeRoom, 0);
         }
         System.out.println("Well done, you have completed the quest!");
+        for(Player player : players){
+            if(player.getHitPoints() > 0){
+                System.out.println(player.getName() + " has earned " + player.getGold() + " gold and gained " + player.getExperience() + "experience points.");
+            }
+        }
     }
 
     private void roomCompleted() {
@@ -202,7 +208,8 @@ public class Game {
     }
 
     public void combat(ArrayList<Player> players, Room room, int monsterIndex) {
-        // Select monster todo => room complete
+        Scanner inputScanner = new Scanner(System.in);
+        // Select monster
         Monster monster = room.getMonsters().get(monsterIndex);
         System.out.println("A " + monster.getName() + " appears!");
         // continue until monster is dead
@@ -210,12 +217,16 @@ public class Game {
             // Loop through players
             for (Player activePlayer : players) {
                 if (activePlayer.getHitPoints() > 0) {
-                    System.out.println(activePlayer.getName() + " attacks");
-                    String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster);
+                    System.out.println(activePlayer.getName() + " attacks...");
+                    System.out.println("Choose your attack:");
+                    System.out.println("1. Regular Attack");
+                    System.out.println("2. Special Attack");
+                    int playerAttackIndex = inputScanner.nextInt();
+                    String playerAttack = activePlayer.getCharacterClass().attack(activePlayer, monster, playerAttackIndex);
                     System.out.println(playerAttack);
 
                     if (monster.isNotDead()) {
-                        System.out.println(monster.getName() + " attacks");
+                        System.out.println(monster.getName() + " attacks...");
                         String monsterAttack = monster.attack(activePlayer);
                         System.out.println(monsterAttack);
                         // check if player is dead
@@ -246,7 +257,7 @@ public class Game {
 
     private boolean allPlayersAreDead() {
         int totalHitpoints = 0;
-        for(Player player : players){
+        for (Player player : players) {
             totalHitpoints += player.getHitPoints();
         }
         return totalHitpoints <= 0;

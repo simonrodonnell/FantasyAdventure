@@ -31,7 +31,7 @@ public class Monster {
         if(hitPoints <= 0){
             return player.getName() + " killed the "+ type.getName() +"!";
         } else {
-            return player.getName() + " hit the "+ type.getName() +"! It has " + hitPoints + " hp left.";
+            return player.getName() + " does "+ damage +" damage to the "+ type.getName() +"! It has " + hitPoints + " hp left.";
         }
     }
 
@@ -45,7 +45,7 @@ public class Monster {
             String playerStatus = activePlayer.takeDamage(getDamage());
             return "The " + type.getName() + " does "+ getDamage() +" points of damage. " + activePlayer.getName() + " is " + playerStatus + " " + activePlayer.getHitPoints() + " hp left.";
         } else {
-            return "The "+ type.getName() +" missed!";
+            return "The "+ type.getName() +" misses!";
         }
     }
 
